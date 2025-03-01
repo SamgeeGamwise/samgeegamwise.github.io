@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 
 const NotFoundPage = () => {
   return (
+    <>
+    <SEO title="My Project" description="Details about this project" />
     <main>
       <h1>Page not found</h1>
       <p>
@@ -19,6 +21,7 @@ const NotFoundPage = () => {
         <Link to="/">Go home</Link>.
       </p>
     </main>
+    </>
   )
 }
 

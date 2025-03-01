@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Samuel Krohn - Portfolio`,
     description: `A portfolio of Samuel Krohn's work`,
-    siteUrl: `https://samgee.gamwise.me`
+    siteUrl: `https://samgee.gamwise.me`,
+    author: `Samuel Krohn`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -33,8 +34,14 @@ module.exports = {
   }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
-    }
+      name: "Samuel Krohn Portfolio",
+      short_name: "Portfolio",
+      start_url: "/",
+      background_color: "#ffffff",
+      theme_color: "#047857",
+      display: "standalone",
+      icon: "src/images/favicon.png",
+    },
   }, 
   {
     resolve: `gatsby-plugin-google-fonts`,
@@ -45,7 +52,7 @@ module.exports = {
       ],
       display: "swap",
     },
-}, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
+}, "gatsby-plugin-react-helmet", "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",

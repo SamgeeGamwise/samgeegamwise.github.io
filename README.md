@@ -30,5 +30,5 @@ This portfolio is a **minimalistic yet visually appealing** representation of my
 ## 🔧 Installation & Development
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/SamgeeGamwise/portfolio.git
-cd portfolio
+git clone https://github.com/SamgeeGamwise/samgeegamwise.github.io.git
+cd samgeegamwise.github.io
