@@ -70,11 +70,16 @@ jobs:
           path: |
             public
             .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          key: node-cache-${{ runner.os }}-gatsby-${{ hashFiles('package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-gatsby-build-
+            node-cache-${{ runner.os }}-gatsby-
+  
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      - name: Clean Gatsby Cache
+        run: npm run clean
+
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
