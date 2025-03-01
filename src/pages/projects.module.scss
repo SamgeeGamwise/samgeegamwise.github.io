@@ -1,0 +1,120 @@
+@use "../styles/variables" as *;
+
+.projectsPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--accent-color);
+  font-family: $heading-font;
+
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projectCard {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.projectName {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+
+.projectDescription {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+  }
+}
+
+.projectTechnologies {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-style: italic;
+  margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.liveLink,
+.repoLink {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: var(--background-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--secondary-color);
+  }
+
+  @media (max-width: 600px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+ 
+/* Back to Home Link */
+.backToHome {
+  margin-top: 2rem;
+
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

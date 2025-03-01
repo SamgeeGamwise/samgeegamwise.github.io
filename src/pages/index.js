@@ -10,8 +10,8 @@ const IndexPage = () => {
         <h1 className={styles.title}>Samuel Krohn</h1>
         <p className={styles.subtitle}>Building solutions with precision & creativity</p>
         <div className={styles.showcaseContainer}>
-          <Showcase name="Projects" link="/projects"></Showcase>
           <Showcase name="About" link="/about"></Showcase>
+          <Showcase name="Projects" link="/projects"></Showcase>
         </div>
       </div>
     </Layout>
