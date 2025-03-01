@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  .heading {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #047857;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .subtext {
+    font-size: 1rem;
+    color: #666;
+    animation: fadeIn 1.4s ease-in-out;
+  }
+  
+  .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #047857;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  
+    &:hover {
+      background-color: #03543f;
+      transform: scale(1.05);
+    }
+  
+    &:focus {
+      outline: 2px solid #03543f;
+    }
+  }
+  
+  /* Smooth fade-in animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
