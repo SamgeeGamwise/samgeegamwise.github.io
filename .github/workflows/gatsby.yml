@@ -68,12 +68,12 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
+            ~/.npm
             public
             .cache
-          key: node-cache-${{ runner.os }}-gatsby-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-gatsby-${{ github.run_id }}
           restore-keys: |
-            node-cache-${{ runner.os }}-gatsby-
-  
+            ${{ runner.os }}-gatsby-        
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
