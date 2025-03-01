@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Showcase from "../components/Showcase";
+import Layout from "../components/Layout/Layout";
+import Showcase from "../components/Showcase/Showcase";
 import * as styles from "./index.module.scss";
 
 const IndexPage = () => {

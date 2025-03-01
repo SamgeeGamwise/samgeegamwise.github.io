@@ -1,13 +1,12 @@
-@use "../styles/variables" as *;
+@use "../../styles/variables" as *;
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
 }
 
 .main {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 }
 
