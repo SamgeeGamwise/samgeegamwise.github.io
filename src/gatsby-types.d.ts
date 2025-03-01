@@ -1901,10 +1901,9 @@ type Query_mdxArgs = {
 
 
 type Query_siteArgs = {
-  _xesModule: InputMaybe<BooleanQueryOperatorInput>;
   buildTime: InputMaybe<DateQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
-  default: InputMaybe<SiteDefaultFilterInput>;
+  graphqlTypegen: InputMaybe<BooleanQueryOperatorInput>;
   host: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
@@ -1970,10 +1969,9 @@ type Query_sitePluginArgs = {
 };
 
 type Site = Node & {
-  readonly _xesModule: Maybe<Scalars['Boolean']>;
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly children: ReadonlyArray<Node>;
-  readonly default: Maybe<SiteDefault>;
+  readonly graphqlTypegen: Maybe<Scalars['Boolean']>;
   readonly host: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
@@ -2155,46 +2153,6 @@ type SiteConnection_sumArgs = {
   field: SiteFieldSelector;
 };
 
-type SiteDefault = {
-  readonly graphqlTypegen: Maybe<Scalars['Boolean']>;
-  readonly siteMetadata: Maybe<SiteDefaultSiteMetadata>;
-};
-
-type SiteDefaultFieldSelector = {
-  readonly graphqlTypegen: InputMaybe<FieldSelectorEnum>;
-  readonly siteMetadata: InputMaybe<SiteDefaultSiteMetadataFieldSelector>;
-};
-
-type SiteDefaultFilterInput = {
-  readonly graphqlTypegen: InputMaybe<BooleanQueryOperatorInput>;
-  readonly siteMetadata: InputMaybe<SiteDefaultSiteMetadataFilterInput>;
-};
-
-type SiteDefaultSiteMetadata = {
-  readonly siteUrl: Maybe<Scalars['String']>;
-  readonly title: Maybe<Scalars['String']>;
-};
-
-type SiteDefaultSiteMetadataFieldSelector = {
-  readonly siteUrl: InputMaybe<FieldSelectorEnum>;
-  readonly title: InputMaybe<FieldSelectorEnum>;
-};
-
-type SiteDefaultSiteMetadataFilterInput = {
-  readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
-  readonly title: InputMaybe<StringQueryOperatorInput>;
-};
-
-type SiteDefaultSiteMetadataSortInput = {
-  readonly siteUrl: InputMaybe<SortOrderEnum>;
-  readonly title: InputMaybe<SortOrderEnum>;
-};
-
-type SiteDefaultSortInput = {
-  readonly graphqlTypegen: InputMaybe<SortOrderEnum>;
-  readonly siteMetadata: InputMaybe<SiteDefaultSiteMetadataSortInput>;
-};
-
 type SiteEdge = {
   readonly next: Maybe<Site>;
   readonly node: Site;
@@ -2202,10 +2160,9 @@ type SiteEdge = {
 };
 
 type SiteFieldSelector = {
-  readonly _xesModule: InputMaybe<FieldSelectorEnum>;
   readonly buildTime: InputMaybe<FieldSelectorEnum>;
   readonly children: InputMaybe<NodeFieldSelector>;
-  readonly default: InputMaybe<SiteDefaultFieldSelector>;
+  readonly graphqlTypegen: InputMaybe<FieldSelectorEnum>;
   readonly host: InputMaybe<FieldSelectorEnum>;
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
@@ -2215,10 +2172,9 @@ type SiteFieldSelector = {
 };
 
 type SiteFilterInput = {
-  readonly _xesModule: InputMaybe<BooleanQueryOperatorInput>;
   readonly buildTime: InputMaybe<DateQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
-  readonly default: InputMaybe<SiteDefaultFilterInput>;
+  readonly graphqlTypegen: InputMaybe<BooleanQueryOperatorInput>;
   readonly host: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
@@ -2704,29 +2660,32 @@ type SitePluginSortInput = {
 
 type SiteSiteMetadata = {
   readonly description: Maybe<Scalars['String']>;
+  readonly siteUrl: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataFieldSelector = {
   readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly siteUrl: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataSortInput = {
   readonly description: InputMaybe<SortOrderEnum>;
+  readonly siteUrl: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
 
 type SiteSortInput = {
-  readonly _xesModule: InputMaybe<SortOrderEnum>;
   readonly buildTime: InputMaybe<SortOrderEnum>;
   readonly children: InputMaybe<NodeSortInput>;
-  readonly default: InputMaybe<SiteDefaultSortInput>;
+  readonly graphqlTypegen: InputMaybe<SortOrderEnum>;
   readonly host: InputMaybe<SortOrderEnum>;
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;

@@ -9,7 +9,7 @@ const About = () => {
       <div className={styles.aboutPage}>
         <h1 className={styles.title}>About Me</h1>
         <p className={styles.description}>
-          I'm a <b>Software Engineer</b> with experience in <b>full-stack development, automation, and web performance optimization</b>. My expertise spans modern frameworks like <b>Angular, React, Next.js, and NestJS</b>, as well as backend technologies including <b>ASP.NET, Node.js, and PostgreSQL</b>.
+          I'm a <b>Software Engineer</b> with experience in <b>full-stack development, automation, and web performance optimization</b>. My expertise spans modern frameworks like <b>Angular, React, and Next.js</b>, as well as backend technologies including <b>ASP.NET, NestJS, Express, and PostgreSQL</b>.
         </p>
         <section className={styles.section}>
           <h2>Experience</h2>
