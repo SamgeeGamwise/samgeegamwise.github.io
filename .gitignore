@@ -42,7 +42,6 @@ Thumbs.db
 # Dependencies lock files (if using only one package manager, keep the correct one)
 # Remove the one you are not using
 package-lock.json
-yarn.lock
 
 # Misc
 coverage/
