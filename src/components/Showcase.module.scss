@@ -1,0 +1,42 @@
+@use "../styles/variables" as *;
+
+.projectsLink {
+    text-decoration: none; // Removes underline
+    color: inherit; // Makes it inherit text color
+
+    .showcase {
+        margin-top: 2rem;
+        min-width: 14rem;
+        
+        .designArea {
+            padding: 2rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+            .name {
+                margin: 0;
+                font-size: 2rem;
+                font-family: $heading-font;
+            }
+        }   
+    }
+}
+
+
+@media (max-width: 768px) {
+    .projectsLink {
+        .showcase {
+            .designArea {
+                padding: 1rem;
+                .name {
+                    font-size: 1.5rem;
+                }
+            }  
+        }    
+    }
+}

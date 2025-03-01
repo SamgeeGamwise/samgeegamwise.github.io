@@ -15,26 +15,31 @@
   color: var(--accent-color);
   font-family: $heading-font;
   animation: fadeIn 1s ease-in-out;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .subtitle {
   font-size: 1.5rem;
   color: var(--text-color);
   font-family: $body-font;
-}
 
-.showcase {
-  margin-top: 2rem;
-}
-
-.designArea {
-  padding: 2rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 }
+
+
+.showcaseContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  @media (max-width: 768px) {
+    flex-direction: column; // Mobile: switch to column
+    align-items: stretch;
+  }
+}
+
+
+
