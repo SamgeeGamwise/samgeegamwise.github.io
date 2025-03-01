@@ -1,0 +1,16 @@
+/* Back to Home Link */
+.backToHome {
+    margin-top: 2rem;
+  
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: opacity 0.3s ease-in-out;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }

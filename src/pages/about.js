@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/Layout/Layout";
+import BackToHome from "../components/BackToHome/BackToHome";
 import SEO from "../components/SEO/SEO";
 import * as styles from "./about.module.scss";
 
@@ -55,10 +56,7 @@ const About = () => {
 
           <a href="/Samuel Krohn Resume.pdf" className={styles.resumeLink} download>Download Resume</a>
 
-          {/* Back to Home Link */}
-          <div className={styles.backToHome}>
-            <Link to="/">← Back to Home</Link>
-          </div>
+          <BackToHome />
         </div>
       </Layout>
     </>

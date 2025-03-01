@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+import BackToHome from "../components/BackToHome/BackToHome";
 import * as styles from "./projects.module.scss";
 
 const projects = [
@@ -73,41 +74,11 @@ const Projects = () => {
           <h1 className={styles.title}>Projects</h1>
           <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
-              <div key={index} className={styles.projectCard}>
-                <h2 className={styles.projectName}>{project.name}</h2>
-                <p className={styles.projectDescription}>{project.description}</p>
-                <p className={styles.projectTechnologies}>
-                  {project.technologies.join(", ")}
-                </p>
-                <div className={styles.projectLinks}>
-                  {project.liveLink && (
-                    <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.liveLink}
-                    >
-                      Live Site
-                    </a>
-                  )}
-                  {project.repoLink && (
-                    <a
-                    href={project.repoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.repoLink}
-                    >
-                      GitHub Repo
-                    </a>
-                  )}
-                </div>
-              </div>
+              <ProjectCard key={index} project={project} />
             ))}
           </div>
         </div>
-      <div className={styles.backToHome}>
-      <Link to="/">← Back to Home</Link>
-      </div>
+        <BackToHome />
       </Layout>
     </>
   );

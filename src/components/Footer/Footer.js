@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <span className={styles.footerContainer}>
       <footer className={styles.footer}>© {new Date().getFullYear()} Samuel Krohn</footer>
-      {/* <DarkModeToggle /> */}
     </span>
   );
 };
