@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 import Showcase from "../components/Showcase/Showcase";
 import * as styles from "./index.module.scss";
-import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
 
 const IndexPage = () => {
   return (
