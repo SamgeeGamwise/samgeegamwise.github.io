@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import * as styles from "./navbar.module.scss";
+import * as styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
