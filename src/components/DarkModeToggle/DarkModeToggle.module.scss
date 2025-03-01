@@ -1,0 +1,73 @@
+// .themeToggle {
+//     white-space: nowrap;
+//     height: min-content;
+//     width: min-content;
+//     display: inline-block;
+//     padding: 0.5rem 1rem;
+//     background: var(--accent-color);
+//     color: var(--background-color);
+//     font-weight: bold;
+//     text-decoration: none;
+//     border-radius: 8px;
+//     transition: background 0.3s ease-in-out;
+  
+//     &:hover {
+//       background: var(--secondary-color);
+//     }
+  
+//     @media (max-width: 600px) {
+//       padding: 0.6rem 1.2rem;
+//       font-size: 0.9rem;
+//     }
+// }
+.toggleWrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensures it's above other elements */
+
+    width: 45px;
+    height: 22px;
+    background: #eaeaea;
+    border-radius: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background 0.3s ease-in-out;
+    padding: 2px;
+  }
+  
+  .darkMode {
+    background: #2c2c2c;
+  }
+  
+  /* Toggle Button */
+  .toggleSlider {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .dark {
+    transform: translateX(23px);
+  }
+  
+  /* Icons */
+  .icon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
