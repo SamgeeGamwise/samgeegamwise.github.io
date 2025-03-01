@@ -1,49 +1,34 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Samuel Krohn - Portfolio
 
-## 🚀 Quick start
+Welcome to my **personal portfolio website**, built with **Gatsby.js** and styled with **SCSS modules**. This site showcases my projects, experience, and skills in **full-stack development**.
 
-1.  **Create a Gatsby site.**
+🚀 **Live Site:** [samgee.gamwise.me](https://samgee.gamwise.me)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+---
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## 📌 About This Project
+This portfolio is a **minimalistic yet visually appealing** representation of my work as a **Software Engineer**. Inspired by **CSS Zen Garden**, the site emphasizes **modern web design** with a focus on **CSS and responsive UI**.
 
-2.  **Start developing.**
+### **🔹 Features**
+- 🌙 **Dark Mode / Light Mode Toggle**
+- 🎨 **Custom SCSS Styling**
+- 🖥 **Fully Responsive Design**
+- 📁 **Projects Section with Live Links**
+- 📜 **Downloadable Resume**
+- 📌 **GitHub Pages Deployment (samgee.gamwise.me)**
 
-    Navigate into your new site’s directory and start it up.
+---
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## 🛠️ Technologies Used
+- **Framework:** [Gatsby.js](https://www.gatsbyjs.com/)
+- **Styling:** SCSS Modules
+- **Hosting:** GitHub Pages
+- **DNS:** Custom Domain (`gamwise.me`)
 
-3.  **Open the code and start customizing!**
+---
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+## 🔧 Installation & Development
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/SamgeeGamwise/portfolio.git
+cd portfolio
