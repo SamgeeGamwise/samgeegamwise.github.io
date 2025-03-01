@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   siteMetadata: {
     title: `Samuel Krohn - Portfolio`,
     description: `A portfolio of Samuel Krohn's work`,
@@ -61,5 +61,3 @@ const config = {
     __key: "pages"
   }]
 };
-
-export default config;
