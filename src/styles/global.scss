@@ -1,0 +1,30 @@
+@use "variables";
+
+:root {
+  --primary-color: #064e3b;
+  --secondary-color: #0f766e;
+  --accent-color: #34d399;
+  --background-color: #022c22;
+  --text-color: #e5e7eb;
+}
+
+[data-theme="light"] {
+  --primary-color: #e5f9e0;
+  --secondary-color: #c3f7d1;
+  --accent-color: #059669;
+  --background-color: #fefefe;
+  --text-color: #333;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: variables.$body-font;
+  text-align: center;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: variables.$heading-font;
+  color: var(--accent-color);
+}

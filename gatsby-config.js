@@ -34,7 +34,17 @@ const config = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
+  }, 
+  {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `Space Grotesk:wght@400;500;700`,
+        `Work Sans:wght@300;400;600`
+      ],
+      display: "swap",
+    },
+}, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
