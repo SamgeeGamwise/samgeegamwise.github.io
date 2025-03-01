@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/Seo/Seo";
 import Showcase from "../components/Showcase/Showcase";
 import * as styles from "./index.module.scss";
 
 const IndexPage = () => {
   return (
     <>
-      <SEO title="My Project" description="Details about this project" />
+      <Seo title="My Project" description="Details about this project" />
       <Layout>
         <div className={styles.homepage}>
           <h1 className={styles.title}>Samuel Krohn</h1>

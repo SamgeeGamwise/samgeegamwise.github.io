@@ -1,26 +1,5 @@
-// .themeToggle {
-//     white-space: nowrap;
-//     height: min-content;
-//     width: min-content;
-//     display: inline-block;
-//     padding: 0.5rem 1rem;
-//     background: var(--accent-color);
-//     color: var(--background-color);
-//     font-weight: bold;
-//     text-decoration: none;
-//     border-radius: 8px;
-//     transition: background 0.3s ease-in-out;
-  
-//     &:hover {
-//       background: var(--secondary-color);
-//     }
-  
-//     @media (max-width: 600px) {
-//       padding: 0.6rem 1.2rem;
-//       font-size: 0.9rem;
-//     }
-// }
 .toggleWrapper {
+    all: unset; /* Resets all button styles */
     position: absolute;
     top: 10px;
     right: 10px;

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/Seo/Seo";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import BackToHome from "../components/BackToHome/BackToHome";
 import * as styles from "./projects.module.scss";
@@ -68,7 +68,7 @@ const projects = [
 const Projects = () => {
   return (
     <>
-      <SEO title="My Project" description="Details about this project" />
+      <Seo title="My Project" description="Details about this project" />
       <Layout>
         <div className={styles.projectsPage}>
           <h1 className={styles.title}>Projects</h1>

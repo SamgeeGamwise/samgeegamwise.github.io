@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import SEO from "../components/SEO/SEO";
+import Seo from "../components/Seo/Seo";
 
 const NotFoundPage = () => {
   return (
     <>
-    <SEO title="My Project" description="Details about this project" />
+    <Seo title="My Project" description="Details about this project" />
     <main>
       <h1>Page not found</h1>
       <p>

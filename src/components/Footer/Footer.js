@@ -1,6 +1,5 @@
 import React from "react";
 import * as styles from "./Footer.module.scss";
-import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
 const Footer = () => {
   return (
