@@ -1,13 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import BackToHome from "../components/BackToHome/BackToHome";
-import Seo from "../components/Seo/Seo";
 import * as styles from "./about.module.scss";
+import { headData } from "../head";
 
 const About = () => {
   return (
     <>
-      <Seo title="My Project" description="Details about this project" />
       <Layout>
         <div className={styles.aboutPage}>
           <h1 className={styles.title}>About Me</h1>
@@ -63,3 +62,12 @@ const About = () => {
 };
 
 export default About;
+
+
+export const Head = () => (
+  <>
+    <title>{`About | Samuel Krohn - Portfolio`}</title>
+    { headData }
+    <meta name="description" content="About Samuel Krohn and his career" />
+  </>
+)

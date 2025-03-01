@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Seo from "../components/Seo/Seo";
+import { headData } from "../head";
 
 const NotFoundPage = () => {
+
   return (
     <>
-    <Seo title="My Project" description="Details about this project" />
     <main>
       <h1>Page not found</h1>
       <p>
@@ -28,4 +28,11 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+
+export const Head = () => (
+  <>
+    <title>{`Not Found | Samuel Krohn - Portfolio`}</title>
+    { headData }
+    <meta name="description" content="" />
+  </>
+)

@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import Seo from "../components/Seo/Seo";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import BackToHome from "../components/BackToHome/BackToHome";
+import { headData } from "../head";
 import * as styles from "./projects.module.scss";
 
 const projects = [
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     name: "Announcement Bot",
-    description: "A bot for managing announcements.",
+    description: "A Discord bot for managing announcements.",
     technologies: ["Node"],
     repoLink: "https://github.com/bubbzDotDev/bot-dashboard-backend",
   },
@@ -68,7 +68,6 @@ const projects = [
 const Projects = () => {
   return (
     <>
-      <Seo title="My Project" description="Details about this project" />
       <Layout>
         <div className={styles.projectsPage}>
           <h1 className={styles.title}>Projects</h1>
@@ -85,3 +84,12 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+export const Head = () => (
+  <>
+    <title>{`Projects | Samuel Krohn - Portfolio`}</title>
+    { headData }
+    <meta name="description" content="Projects completed by Samuel Krohn for various reasons" />
+  </>
+)

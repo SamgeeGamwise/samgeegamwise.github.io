@@ -1,13 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import Seo from "../components/Seo/Seo";
 import Showcase from "../components/Showcase/Showcase";
 import * as styles from "./index.module.scss";
+import { headData } from "../head";
 
 const IndexPage = () => {
   return (
     <>
-      <Seo title="My Project" description="Details about this project" />
       <Layout>
         <div className={styles.homepage}>
           <h1 className={styles.title}>Samuel Krohn</h1>
@@ -23,3 +22,12 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+
+export const Head = () => (
+  <>
+    <title>{`Samuel Krohn - Portfolio`}</title>
+    { headData }
+    <meta name="description" content="Samuel Krohn's portfolio website" />
+  </>
+)
