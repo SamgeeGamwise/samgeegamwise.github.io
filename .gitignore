@@ -1,4 +1,49 @@
+# Node dependencies
 node_modules/
+npm-debug.log*
+yarn-error.log
+.pnp/
+.pnp.js
+
+# Build outputs
+public/
 .cache/
-public
-src/gatsby-types.d.ts
+gatsby-node-cache/
+
+# Environment variables
+.env
+.env.* 
+
+# Logs and debugging
+logs/
+*.log
+yarn-debug.log*
+.yarn-integrity
+debug.log
+.DS_Store
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# GitHub Actions cache
+.github/workflows/*.log
+.github/workflows/cache/
+
+# Gatsby specific
+.gatsby/
+.gatsby-cache/
+*.cache
+
+# Dependencies lock files (if using only one package manager, keep the correct one)
+# Remove the one you are not using
+package-lock.json
+yarn.lock
+
+# Misc
+coverage/
+*.bak
