@@ -42,3 +42,4 @@ Thumbs.db
 # Misc
 coverage/
 *.bak
+src/gatsby-types.d.ts
