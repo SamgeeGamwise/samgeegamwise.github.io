@@ -13,7 +13,7 @@ const DarkModeToggle = () => {
       const storedTheme = localStorage.getItem("theme") || "dark";
       setTheme(storedTheme);
       document.documentElement.setAttribute("data-theme", storedTheme);
-    }, []);
+    }, [theme]);
   
     const toggleTheme = () => {
       const newTheme = theme === "dark" ? "light" : "dark";
