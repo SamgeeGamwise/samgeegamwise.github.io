@@ -1,5 +1,9 @@
 export const onRenderBody = ({ setHtmlAttributes }) => {
-    const theme = typeof window !== "undefined" ? localStorage.getItem("theme") : "dark";
-    setHtmlAttributes({ lang: "en", theme: theme || "dark"});
+  if (typeof window === "undefined") {
+    setHtmlAttributes({ lang: "en" });
+  } else {
+    const theme = localStorage.getItem("theme") || "dark";
+    setHtmlAttributes({ lang: "en", theme });
+  }
   };
   
