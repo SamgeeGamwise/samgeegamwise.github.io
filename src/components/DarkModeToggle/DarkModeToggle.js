@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import * as styles from "./DarkModeToggle.module.scss";
 
 const DarkModeToggle = () => {
-    const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") || "dark"; // Default to dark
+    }
+    return "dark";
+  });
 
     useEffect(() => {
       const storedTheme = localStorage.getItem("theme") || "dark";

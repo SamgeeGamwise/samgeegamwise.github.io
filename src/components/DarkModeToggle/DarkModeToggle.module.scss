@@ -1,6 +1,6 @@
 .toggleWrapper {
     all: unset; /* Resets all button styles */
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     z-index: 1000; /* Ensures it's above other elements */
