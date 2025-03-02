@@ -12,14 +12,14 @@ const DarkModeToggle = () => {
     useEffect(() => {
       const storedTheme = localStorage.getItem("theme") || "dark";
       setTheme(storedTheme);
-      document.documentElement.setAttribute("data-theme", storedTheme);
+      document.documentElement.setAttribute("theme", storedTheme);
     }, [theme]);
   
     const toggleTheme = () => {
       const newTheme = theme === "dark" ? "light" : "dark";
       setTheme(newTheme);
       localStorage.setItem("theme", newTheme);
-      document.documentElement.setAttribute("data-theme", newTheme);
+      document.documentElement.setAttribute("theme", newTheme);
     };
   
   return (
