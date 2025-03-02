@@ -10,8 +10,8 @@ const DarkModeToggle = () => {
   });
 
     useEffect(() => {
-      const storedTheme = localStorage.getItem("theme") || "dark";
-      setTheme(storedTheme);
+      const storedTheme = localStorage.getItem("theme");
+      setTheme((prev) => (prev === storedTheme ? prev : storedTheme));
       document.documentElement.setAttribute("theme", storedTheme);
     }, [theme]);
   
