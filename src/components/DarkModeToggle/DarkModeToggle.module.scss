@@ -1,52 +1,53 @@
+/* Toggle Wrapper */
 .toggleWrapper {
-    all: unset; /* Resets all button styles */
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000; /* Ensures it's above other elements */
+  all: unset; /* Resets all button styles */
+  position: absolute;
+  top: 16.5px; // Scaled from 12.5px
+  right: 16.5px; // Scaled from 12.5px
+  z-index: 1000; /* Ensures it's above other elements */
 
-    width: 45px;
-    height: 22px;
-    background: #eaeaea;
-    border-radius: 11px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    transition: background 0.3s ease-in-out;
-    padding: 2px;
-  }
-  
-  .darkMode {
-    background: #2c2c2c;
-  }
-  
-  /* Toggle Button */
-  .toggleSlider {
-    width: 18px;
-    height: 18px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .dark {
-    transform: translateX(23px);
-  }
-  
-  /* Icons */
-  .icon {
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .hidden {
-    opacity: 0;
-  }
-  
+  width: 75px; // Base width
+  height: 36.8px; // Scaled from 27.5px
+  background: #eaeaea;
+  border-radius: 18.4px; // Scaled from 13.75px
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background 0.3s ease-in-out;
+  padding: 3.4px; // Scaled from 2.5px
+}
+
+.darkMode {
+  background: #2c2c2c;
+}
+
+/* Toggle Button */
+.toggleSlider {
+  left: 8px;
+  width: 30px; // Scaled from 22.5px
+  height: 30px; // Scaled from 22.5px
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.dark {
+  transform: translateX(32px); // Scaled from 28.75px
+}
+
+/* Icons */
+.icon {
+  width: 23px; // Scaled from 17.5px
+  height: 23px; // Scaled from 17.5px
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
