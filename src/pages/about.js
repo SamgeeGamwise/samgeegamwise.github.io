@@ -52,7 +52,7 @@ const About = () => {
             <p>Angular, React, Next.js, Vue, SCSS, Tailwind, Bootstrap, Node, Express, NestJS, PostgreSQL, MSSQL.</p>
           </section>
 
-          <a href="/Samuel Krohn Resume.pdf" className={styles.resumeLink} download>Download Resume</a>
+          <a href="/Samuel Krohn Resume.docx" className={styles.resumeLink} download>Download Resume</a>
 
           <BackToHome />
         </div>
