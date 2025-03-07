@@ -10,7 +10,7 @@ const IndexPage = () => {
       <Layout>
         <div className={styles.homepage}>
           <h1 className={styles.title}>Samuel Krohn</h1>
-          <p className={styles.subtitle}>Building solutions with precision & creativity</p>
+          <p className={styles.subtitle}>Simplifying complexity with pragmatic solutions</p>
           <div className={styles.showcaseContainer}>
             <Showcase name="About" link="/about"></Showcase>
             <Showcase name="Projects" link="/projects"></Showcase>
