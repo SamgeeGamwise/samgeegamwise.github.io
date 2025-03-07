@@ -37,7 +37,7 @@ const DarkModeToggle = () => {
           viewBox="0 0 125 125"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="62.5" cy="62.5" r="35" fill="gold" stroke="orange" strokeWidth="3" filter="url(#sunGlow)" />
+          <circle cx="62.5" cy="62.5" r="35" fill="gold" stroke="orange" strokeWidth="3" />
 
           {[...Array(12)].map((_, i) => (
             <line
