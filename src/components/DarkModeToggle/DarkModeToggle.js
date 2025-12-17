@@ -1,25 +1,39 @@
 import React, { useState, useEffect } from 'react'
 import * as styles from './DarkModeToggle.module.scss'
 
+const getInitialTheme = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('theme') || 'dark'
+  }
+  return 'dark'
+}
+
+const sunRays = Array.from({ length: 12 }, (_, i) => (
+  <line
+    key={i}
+    x1="62.5"
+    y1="20"
+    x2="62.5"
+    y2="0"
+    stroke="gold"
+    strokeWidth="6"
+    strokeLinecap="round"
+    transform={`rotate(${i * 30} 62.5 62.5)`}
+    filter="url(#sunGlow)"
+  />
+))
+
 const DarkModeToggle = () => {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') || 'dark' // Default to dark
-    }
-    return 'dark'
-  })
+  const [theme, setTheme] = useState(getInitialTheme)
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') || theme
-    setTheme(prev => (prev === storedTheme ? prev : storedTheme))
-    document.documentElement.setAttribute('theme', storedTheme)
+    if (typeof window === 'undefined') return
+    document.documentElement.setAttribute('theme', theme)
+    localStorage.setItem('theme', theme)
   }, [theme])
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-    document.documentElement.setAttribute('theme', newTheme)
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))
   }
 
   return (
@@ -38,21 +52,7 @@ const DarkModeToggle = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="62.5" cy="62.5" r="35" fill="gold" stroke="orange" strokeWidth="3" />
-
-          {[...Array(12)].map((_, i) => (
-            <line
-              key={i}
-              x1="62.5"
-              y1="20" // Starts further inside the sun
-              x2="62.5"
-              y2="0" // Extends out further from the sun
-              stroke="gold"
-              strokeWidth="6"
-              strokeLinecap="round"
-              transform={`rotate(${i * 30} 62.5 62.5)`}
-              filter="url(#sunGlow)"
-            />
-          ))}
+          {sunRays}
         </svg>
 
         {/* Moon (Dark Mode) */}
