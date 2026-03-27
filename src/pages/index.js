@@ -45,6 +45,7 @@ const IndexPage = () => {
     languages: ["TypeScript", "C#", "Rust"],
     frontend: ["React", "Next.js", "Angular"],
     backend: [".NET", "NestJS", "Express"],
+    hosting: ["GitHub Pages", "Cloudflare"],
   },
   currentlyAt: "HireVue",
 }`}</code></pre>

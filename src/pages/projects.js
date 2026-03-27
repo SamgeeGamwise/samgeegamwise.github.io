@@ -8,7 +8,7 @@ const projects = [
   {
     name: 'DK Roofing, Painting, & Gutters',
     description: 'Marketing website for a local roofing and painting business. Focused on performance and discoverability.',
-    technologies: [{ name: 'Eleventy', url: 'https://github.com/SamgeeGamwise/DarleneKay' }, { name: 'Nunjucks' }],
+    technologies: [{ name: 'Eleventy', url: 'https://github.com/SamgeeGamwise/DarleneKay' }, { name: 'Nunjucks' }, { name: 'Cloudflare' }],
     liveLink: 'https://darlenekay.com/',
   },
   {
