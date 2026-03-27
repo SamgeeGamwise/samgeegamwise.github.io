@@ -1,136 +1,264 @@
 @use "../styles/variables" as *;
 
 .aboutPage {
-  max-width: 800px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 4rem 2rem;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    padding: 2rem 0rem;
-  }
+  animation: fadeInUp 0.6s ease-out both;
 }
 
-.title {
-  font-size: 3rem;
-  color: var(--accent-color);
-  font-family: $heading-font;
-
-  @media (max-width: 600px) {
-    font-size: 2.5rem;
-  }
+// ─── Page Header ──────────────────────────────────────────────────────────────
+.pageHeader {
+  margin-bottom: 4rem;
 }
 
-.description {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-
-  @media (max-width: 600px) {
-    font-size: 1rem;
-  }
+.pageTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
 }
 
+.pageSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+// ─── Sections ─────────────────────────────────────────────────────────────────
 .section {
-  margin-bottom: 3rem;
-  text-align: left;
+  margin-bottom: 4rem;
+}
 
-  h2 {
-    font-size: 2rem;
-    color: var(--accent-color);
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: $mono-font;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 
-    @media (max-width: 600px) {
-      font-size: 1.75rem;
-    }
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
   }
 }
 
-.experience {
+// ─── Timeline ─────────────────────────────────────────────────────────────────
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 0;
+    width: 1px;
+    background: var(--border-color);
+  }
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timelineDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineContent {
+  flex: 1;
+  padding-bottom: 0.5rem;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.jobRole {
+  font-family: $heading-font;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.jobCompany {
+  font-size: 0.9rem;
+  color: var(--accent-primary);
+}
+
+.jobPeriod {
+  font-family: $mono-font;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.jobBullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.jobBullet {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: 1rem;
+  position: relative;
+
+  &::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+  }
+}
+
+// ─── Skills ───────────────────────────────────────────────────────────────────
+.skillGroups {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
 
-  div {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
+.skillGroup {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: flex-start;
+  gap: 1rem;
 
-    @media (max-width: 768px) {
-      padding: 1rem;
-    }
-
-    h3 {
-      color: var(--text-color);
-      font-size: 1.5rem;
-
-      @media (max-width: 600px) {
-        font-size: 1.25rem;
-      }
-    }
-
-    p {
-      font-size: 1rem;
-      color: var(--text-color);
-      margin-bottom: 0.5rem;
-
-      @media (max-width: 600px) {
-        font-size: 0.9rem;
-      }
-    }
-
-    ul {
-      padding-left: 1.5rem;
-
-      li {
-        font-size: 1rem;
-        color: var(--text-color);
-        line-height: 1.5;
-
-        @media (max-width: 600px) {
-          font-size: 0.9rem;
-        }
-      }
-    }
-    
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-    
-      &:hover {
-        color: var(--secondary-color);
-        text-decoration: underline;
-      }
-    
-      &:focus {
-        outline: 2px solid var(--accent-color);
-        outline-offset: 2px;
-      }
-    }
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 }
 
-.resumeLink {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--accent-color);
-  color: var(--background-color);
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease-in-out;
+.skillGroupLabel {
+  font-family: $mono-font;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 0.3rem;
+}
+
+.skillBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillBadge {
+  font-size: 0.85rem;
+  font-family: $body-font;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: var(--secondary-color);
+    border-color: var(--border-hover);
+    color: var(--text-primary);
   }
+}
 
-  @media (max-width: 600px) {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+// ─── Education ────────────────────────────────────────────────────────────────
+.educationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eduCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.eduSchool {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.eduDegree {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.eduNote {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0.4rem 0 0;
+  font-family: $mono-font;
+}
+
+// ─── Resume CTA ───────────────────────────────────────────────────────────────
+.resumeCta {
+  margin-top: 1rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.resumeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--accent-primary);
+  color: #080d16 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px var(--glow-primary);
   }
 }

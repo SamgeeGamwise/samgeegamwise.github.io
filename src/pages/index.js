@@ -1,33 +1,66 @@
-import React from "react";
-import Layout from "../components/Layout/Layout";
-import Showcase from "../components/Showcase/Showcase";
-import * as styles from "./index.module.scss";
-import { headData } from "../head";
+import React from 'react'
+import { Link } from 'gatsby'
+import Layout from '../components/Layout/Layout'
+import * as styles from './index.module.scss'
+import { headData } from '../head'
 
 const IndexPage = () => {
   return (
-    <>
-      <Layout>
-        <div className={styles.homepage}>
-          <h1 className={styles.title}>Samuel Krohn</h1>
-          <p className={styles.subtitle}>Simplifying complexity with pragmatic solutions</p>
-          <div className={styles.showcaseContainer}>
-            <Showcase name="About" link="/about"></Showcase>
-            <Showcase name="Projects" link="/projects"></Showcase>
+    <Layout>
+      <div className={styles.hero}>
+        <div className={styles.heroContent}>
+          <span className={styles.greeting}>Hi, I&apos;m</span>
+          <h1 className={styles.name}>Samuel Krohn</h1>
+          <h2 className={styles.role}>
+            Software Engineer &amp; <span className={styles.accent}>Full-Stack Developer</span>
+          </h2>
+          <p className={styles.summary}>
+            I build pragmatic, performant web applications and automation tools that eliminate complexity.
+            Currently at <span className={styles.highlight}>HireVue</span>, working across the full stack
+            with TypeScript, React, .NET, and more.
+          </p>
+          <div className={styles.ctas}>
+            <Link to="/projects" className={styles.ctaPrimary}>View My Work</Link>
+            <Link to="/about" className={styles.ctaSecondary}>About Me</Link>
           </div>
         </div>
-      </Layout>
-    </>
-  );
-};
 
-export default IndexPage;
+        <div className={styles.heroVisual}>
+          <div className={styles.terminal}>
+            <div className={styles.terminalHeader}>
+              <span className={`${styles.dot} ${styles.red}`} />
+              <span className={`${styles.dot} ${styles.yellow}`} />
+              <span className={`${styles.dot} ${styles.green}`} />
+              <span className={styles.filename}>profile.ts</span>
+            </div>
+            <pre className={styles.terminalBody}><code>{`const engineer = {
+  name: "Samuel Krohn",
+  role: "Software Engineer",
+  focus: [
+    "Full-Stack Development",
+    "Process Automation",
+    "Web Performance",
+  ],
+  stack: {
+    languages: ["TypeScript", "C#", "Rust"],
+    frontend: ["React", "Next.js", "Angular"],
+    backend: [".NET", "NestJS", "Express"],
+  },
+  currentlyAt: "HireVue",
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
 
+export default IndexPage
 
 export const Head = () => (
   <>
-    <title>{`Samuel Krohn - Portfolio`}</title>
-    { headData }
-    <meta name="description" content="Samuel Krohn's portfolio website" />
+    <title>Samuel Krohn — Software Engineer</title>
+    {headData}
+    <meta name="description" content="Samuel Krohn is a software engineer specializing in full-stack development, automation, and web performance." />
   </>
 )

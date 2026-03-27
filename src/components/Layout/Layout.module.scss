@@ -1,12 +1,106 @@
 @use "../../styles/variables" as *;
 
+// ─── Navbar ──────────────────────────────────────────────────────────────────
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLogo {
+  font-family: $heading-font;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.logoMono {
+  font-family: $mono-font;
+  color: var(--accent-primary);
+  font-weight: 400;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  font-family: $body-font;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-secondary) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width 0.2s ease;
+    border-radius: 1px;
+  }
+
+  &:hover {
+    color: var(--text-primary) !important;
+    opacity: 1;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.navLinkActive {
+  color: var(--accent-primary) !important;
+
+  &::after {
+    width: 100%;
+  }
+}
+
+// ─── Page Container ───────────────────────────────────────────────────────────
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: calc(100vh - 64px);
 }
 
 .main {
-  padding: 3rem 2rem;
-}
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
 
+  @media (max-width: $bp-mobile) {
+    padding: 2rem 1.25rem;
+  }
+}

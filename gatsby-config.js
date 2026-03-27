@@ -41,8 +41,8 @@ module.exports = {
         name: 'Samuel Krohn Portfolio',
         short_name: 'Portfolio',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#047857',
+        background_color: '#080d16',
+        theme_color: '#38bdf8',
         display: 'standalone',
         icon: 'src/images/favicon.png',
       },
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Space Grotesk:wght@400;500;700`, `Work Sans:wght@300;400;600`],
+        fonts: [`Space Grotesk:wght@400;500;700`, `Work Sans:wght@300;400;600`, `JetBrains Mono:wght@400;500`],
         display: 'swap',
       },
     },

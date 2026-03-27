@@ -1,53 +1,48 @@
-/* Toggle Wrapper */
+@use "../../styles/variables" as *;
+
 .toggleWrapper {
-  all: unset; /* Resets all button styles */
-  position: absolute;
-  top: 16.5px; // Scaled from 12.5px
-  right: 16.5px; // Scaled from 12.5px
-  z-index: 1000; /* Ensures it's above other elements */
-
-  width: 75px; // Base width
-  height: 36.8px; // Scaled from 27.5px
-  background: #eaeaea;
-  border-radius: 18.4px; // Scaled from 13.75px
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  transition: background 0.3s ease-in-out;
-  padding: 3.4px; // Scaled from 2.5px
-}
-
-.darkMode {
-  background: #2c2c2c;
-}
-
-/* Toggle Button */
-.toggleSlider {
-  left: 8px;
-  width: 30px; // Scaled from 22.5px
-  height: 30px; // Scaled from 22.5px
-  background: white;
-  border-radius: 50%;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease-in-out;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  padding: 0;
+  outline: none;
+
+  &:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-elevated);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+  }
 }
 
-.dark {
-  transform: translateX(32px); // Scaled from 28.75px
+.toggleSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-/* Icons */
 .icon {
-  width: 23px; // Scaled from 17.5px
-  height: 23px; // Scaled from 17.5px
-  position: absolute;
-  transition: opacity 0.3s ease-in-out;
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .hidden {
-  opacity: 0;
+  display: none;
 }
+
+// Unused in new design but kept for component compat
+.dark {}
+.darkMode {}

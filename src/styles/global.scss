@@ -1,31 +1,105 @@
-@use "variables";
+@use "variables" as *;
+@use "animations";
 
+// ─── Dark Theme (default) ────────────────────────────────────────────────────
 :root {
-  --primary-color: #064e3b;
-  --secondary-color: #0f766e;
-  --accent-color: #34d399;
-  --background-color: #022c22;
-  --text-color: #e5e7eb;
+  --bg-primary: #080d16;
+  --bg-secondary: #0e1521;
+  --bg-card: #131d2e;
+  --bg-elevated: #1a2640;
+  --border-color: rgba(56, 189, 248, 0.12);
+  --border-hover: rgba(56, 189, 248, 0.3);
+
+  --accent-primary: #38bdf8;
+  --accent-secondary: #818cf8;
+  --accent-green: #4ade80;
+
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+
+  --glow-primary: rgba(56, 189, 248, 0.15);
+  --glow-secondary: rgba(129, 140, 248, 0.15);
+
+  --nav-bg: rgba(8, 13, 22, 0.85);
 }
 
+// ─── Light Theme ─────────────────────────────────────────────────────────────
 [theme="light"] {
-  --primary-color: #e5f9e0;
-  --secondary-color: #c3f7d1;
-  --accent-color: #059669;
-  --background-color: #fefefe;
-  --text-color: #333;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #f1f5f9;
+  --bg-elevated: #e2e8f0;
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-hover: rgba(2, 132, 199, 0.4);
+
+  --accent-primary: #0284c7;
+  --accent-secondary: #4f46e5;
+  --accent-green: #16a34a;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --glow-primary: rgba(2, 132, 199, 0.1);
+  --glow-secondary: rgba(79, 70, 229, 0.1);
+
+  --nav-bg: rgba(255, 255, 255, 0.85);
+}
+
+// ─── Base Reset & Body ───────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background-color);
-  color: var(--text-color);
-  font-family: variables.$body-font;
-  text-align: center;
-  line-height: 1.6;
-  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: $body-font;
+  line-height: 1.7;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3 {
-  font-family: variables.$heading-font;
-  color: var(--accent-color);
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+code, pre, .mono {
+  font-family: $mono-font;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
 }
