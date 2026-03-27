@@ -30,6 +30,9 @@ Thumbs.db
 *.swp
 *.swo
 
+# Claude Code (local overrides only — settings.json can be committed if desired)
+.claude/settings.local.json
+
 # GitHub Actions cache
 .github/workflows/*.log
 .github/workflows/cache/
