@@ -23,7 +23,7 @@ const projects = [
     technologies: [{ name: 'Next.js' }, { name: 'AirTable API' }],
   },
   {
-    name: 'Home Rhythm',
+    name: 'Calendar App',
     description: 'Skylight-inspired household productivity dashboard for Raspberry Pi. Google Calendar integration, todo/chore lists, and routine tracking — all in one always-on display.',
     technologies: [
       { name: 'Next.js', url: 'https://github.com/SamgeeGamwise/ProductivityApp' },
@@ -31,6 +31,7 @@ const projects = [
       { name: 'Tailwind CSS' },
       { name: 'Google Calendar API' },
     ],
+    liveLink: 'https://productivity-app-ten-rho.vercel.app/',
   },
   {
     name: '30 Minute Pomodoro Timer',
