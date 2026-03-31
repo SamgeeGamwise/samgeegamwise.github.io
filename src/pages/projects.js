@@ -34,6 +34,14 @@ const projects = [
     liveLink: 'https://productivity-app-ten-rho.vercel.app/',
   },
   {
+    name: 'LinkedIn Promoted Job Filter',
+    description: 'Browser extension that hides promoted jobs from LinkedIn search results, including dynamically loaded listings.',
+    technologies: [
+      { name: 'JavaScript', url: 'https://github.com/SamgeeGamwise/LinkedInPromotionRemover' },
+      { name: 'WebExtensions' }
+    ],
+  },
+  {
     name: '30 Minute Pomodoro Timer',
     description: 'Cross-platform desktop application implementing the Pomodoro productivity technique.',
     technologies: [{ name: 'Electronjs', url: 'https://github.com/SamgeeGamwise/Pomodoro' }],
