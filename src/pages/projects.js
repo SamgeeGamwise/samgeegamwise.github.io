@@ -8,72 +8,101 @@ const projects = [
   {
     name: 'DK Roofing, Painting, & Gutters',
     description: 'Marketing website for a local roofing and painting business. Focused on performance and discoverability.',
-    technologies: [{ name: 'Eleventy', url: 'https://github.com/SamgeeGamwise/DarleneKay' }, { name: 'Nunjucks' }, { name: 'Cloudflare' }],
+    technologies: [
+      { name: 'Eleventy', url: 'https://www.11ty.dev/' },
+      { name: 'Nunjucks', url: 'https://mozilla.github.io/nunjucks/' },
+      { name: 'Cloudflare', url: 'https://www.cloudflare.com/' },
+    ],
+    github: 'https://github.com/SamgeeGamwise/DarleneKay',
     liveLink: 'https://darlenekay.com/',
   },
   {
     name: 'Solar Clean Colorado',
     description: 'Marketing website for a solar panel cleaning service, achieving a perfect Lighthouse score.',
-    technologies: [{ name: 'Gatsby.js', url: 'https://github.com/Solarcleancolorado/solarcleancolorado.github.io' }],
+    technologies: [{ name: 'Gatsby.js', url: 'https://www.gatsbyjs.com/' }],
+    github: 'https://github.com/Solarcleancolorado/solarcleancolorado.github.io',
     liveLink: 'https://samgee.gamwise.me/solarcleancolorado/',
   },
   {
     name: 'Red Rock 1 Management Interface',
     description: 'Custom internal tool for viewing and updating operational data, built on top of the AirTable API.',
-    technologies: [{ name: 'Next.js' }, { name: 'AirTable API' }],
+    technologies: [
+      { name: 'Next.js', url: 'https://nextjs.org/' },
+      { name: 'AirTable API', url: 'https://airtable.com/developers/web/api/introduction' },
+    ],
+  },
+  {
+    name: 'Pong',
+    description: 'Pong, using Rust and the Macroquad framework.',
+    technologies: [
+      { name: 'Rust', url: 'https://www.rust-lang.org/' },
+      { name: 'Macroquad', url: 'https://macroquad.rs/' },
+    ],
+    github: 'https://github.com/SamgeeGamwise/PongRust',
+    liveLink: '/pong/',
   },
   {
     name: 'Calendar App',
     description: 'Skylight-inspired household productivity dashboard for Raspberry Pi. Google Calendar integration, todo/chore lists, and routine tracking — all in one always-on display.',
     technologies: [
-      { name: 'Next.js', url: 'https://github.com/SamgeeGamwise/ProductivityApp' },
-      { name: 'TypeScript' },
-      { name: 'Tailwind CSS' },
-      { name: 'Google Calendar API' },
+      { name: 'Next.js', url: 'https://nextjs.org/' },
+      { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
+      { name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
+      { name: 'Google Calendar API', url: 'https://developers.google.com/calendar' },
     ],
+    github: 'https://github.com/SamgeeGamwise/ProductivityApp',
     liveLink: 'https://productivity-app-ten-rho.vercel.app/',
   },
   {
     name: 'LinkedIn Promoted Job Filter',
     description: 'Browser extension that hides promoted jobs from LinkedIn search results, including dynamically loaded listings.',
     technologies: [
-      { name: 'JavaScript', url: 'https://github.com/SamgeeGamwise/LinkedInPromotionRemover' },
-      { name: 'WebExtensions' }
+      { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+      { name: 'WebExtensions', url: 'https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions' },
     ],
+    github: 'https://github.com/SamgeeGamwise/LinkedInPromotionRemover',
   },
   {
     name: '30 Minute Pomodoro Timer',
     description: 'Cross-platform desktop application implementing the Pomodoro productivity technique.',
-    technologies: [{ name: 'Electronjs', url: 'https://github.com/SamgeeGamwise/Pomodoro' }],
+    technologies: [{ name: 'Electron.js', url: 'https://www.electronjs.org/' }],
+    github: 'https://github.com/SamgeeGamwise/Pomodoro',
   },
   {
     name: 'HarperDB NPM Package',
     description: 'Published npm package providing a clean Node.js interface for interacting with HarperDB.',
-    technologies: [{ name: 'Node.js' }],
+    technologies: [{ name: 'Node.js', url: 'https://nodejs.org/' }],
     npmLink: 'https://www.npmjs.com/package/harperdb-node',
   },
   {
     name: 'Announcement Bot',
     description: 'Discord bot for managing and scheduling server announcements across channels.',
-    technologies: [{ name: 'Node.js', url: 'https://github.com/bubbzDotDev/bot-dashboard-backend' }, { name: 'Discord.js' }],
+    technologies: [
+      { name: 'Node.js', url: 'https://nodejs.org/' },
+      { name: 'Discord.js', url: 'https://discord.js.org/' },
+    ],
+    github: 'https://github.com/bubbzDotDev/bot-dashboard-backend',
   },
   {
     name: 'Advent of Code 2024',
     description: 'Solutions to Advent of Code 2024 puzzles, written as a way to learn Rust.',
-    technologies: [{ name: 'Rust', url: 'https://github.com/SamgeeGamwise/advent-of-code-2024' }],
+    technologies: [{ name: 'Rust', url: 'https://www.rust-lang.org/' }],
+    github: 'https://github.com/SamgeeGamwise/advent-of-code-2024',
   },
   {
     name: 'Dragons D&D',
     description: 'A Dungeons & Dragons companion app for managing campaigns, characters, and encounters.',
     technologies: [
-      { name: 'Vue', url: 'https://github.com/SamgeeGamwise/dragons_laravel' },
-      { name: 'Laravel', url: 'https://github.com/SamgeeGamwise/dragons_backend' },
+      { name: 'Vue', url: 'https://vuejs.org/' },
+      { name: 'Laravel', url: 'https://laravel.com/' },
     ],
+    github: 'https://github.com/SamgeeGamwise/dragons_laravel',
   },
   {
     name: 'Asteroids Arcade Game',
     description: 'Classic Asteroids arcade game rebuilt from scratch with physics-based movement.',
-    technologies: [{ name: 'Python', url: 'https://github.com/SamgeeGamwise/asteroids' }],
+    technologies: [{ name: 'Python', url: 'https://www.python.org/' }],
+    github: 'https://github.com/SamgeeGamwise/asteroids',
   },
 ]
 
