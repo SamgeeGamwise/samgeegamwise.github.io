@@ -11,15 +11,6 @@ const ProjectCard = ({ project }) => {
           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
         </svg>
         <div className={styles.cardActions}>
-          {project.liveLink && (
-            <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="Live site">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-            </a>
-          )}
           {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.iconLink} aria-label="Source code">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -49,6 +40,16 @@ const ProjectCard = ({ project }) => {
           )
         )}
       </div>
+
+      {project.liveLink && (
+        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className={styles.liveLink}>
+          Visit live site
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      )}
     </div>
   )
 }

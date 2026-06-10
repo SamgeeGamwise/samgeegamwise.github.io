@@ -19,7 +19,7 @@ const projects = [
   {
     name: 'Solar Clean Colorado',
     description: 'Marketing website for a solar panel cleaning service, achieving a perfect Lighthouse score.',
-    technologies: [{ name: 'Gatsby.js', url: 'https://www.gatsbyjs.com/' }],
+    technologies: [{ name: 'Gatsby.js', url: 'https://www.gatsbyjs.com/' }, { name: 'React.js', url: 'https://react.dev/' }],
     github: 'https://github.com/Solarcleancolorado/solarcleancolorado.github.io',
     liveLink: 'https://samgee.gamwise.me/solarcleancolorado/',
   },

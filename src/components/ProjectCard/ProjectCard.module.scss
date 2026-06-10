@@ -63,6 +63,38 @@
   margin: 0;
 }
 
+.liveLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.5rem -1.75rem -1.75rem;
+  padding: 0.7rem 1rem;
+  font-family: $mono-font;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-decoration: none;
+  background: var(--glow-primary);
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 0 0 12px 12px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.4);
+    opacity: 1;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
 .techList {
   display: flex;
   flex-wrap: wrap;
