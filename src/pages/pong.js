@@ -1,19 +1,21 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 export default function PongPage() {
-  React.useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "/games/pong/mq_js_bundle.js"
+  useEffect(() => {
+    if (typeof window === "undefined") return
 
-    script.onload = () => {
-      window.load("/games/pong/pong.wasm")
-    }
+    const script = document.createElement("script")
+    script.type = "module"
+    script.innerHTML = `
+      import init from "/games/pong/bevy_pong.js";
+      init("/games/pong/bevy_pong_bg.wasm");
+    `
 
     document.body.appendChild(script)
 
     return () => {
-      document.body.removeChild(script)
+      script.remove()
     }
   }, [])
 
@@ -25,9 +27,7 @@ export default function PongPage() {
 
       <h1>Pong</h1>
 
-      <p>
-        A Pong-style game built in Rust with Macroquad and compiled to WebAssembly.
-      </p>
+      <p>A Pong-style game built in Rust with Bevy and compiled to WebAssembly.</p>
 
       <section
         style={{
@@ -36,16 +36,15 @@ export default function PongPage() {
           overflow: "hidden",
           background: "black",
           aspectRatio: "16 / 9",
+          width: "100%",
         }}
       >
         <canvas
-          id="glcanvas"
-          tabIndex={0}
+          id="bevy-canvas"
           style={{
+            display: "block",
             width: "100%",
             height: "100%",
-            display: "block",
-            background: "black",
           }}
         />
       </section>
