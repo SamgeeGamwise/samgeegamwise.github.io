@@ -8,8 +8,8 @@ export default function PongPage() {
     const script = document.createElement("script")
     script.type = "module"
     script.innerHTML = `
-      import init from "/games/pong/bevy_pong.js";
-      init("/games/pong/bevy_pong_bg.wasm");
+      import init from "/games/pong/pong.js";
+      init("/games/pong/pong.wasm");
     `
 
     document.body.appendChild(script)
@@ -27,7 +27,7 @@ export default function PongPage() {
 
       <h1>Pong</h1>
 
-      <p>A Pong-style game built in Rust with Bevy and compiled to WebAssembly.</p>
+      <p>A Pong-style game built in Rust with Macroquad and compiled to WebAssembly.</p>
 
       <section
         style={{

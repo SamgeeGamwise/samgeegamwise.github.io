@@ -33,10 +33,10 @@ const projects = [
   },
   {
     name: 'Pong',
-    description: 'Pong, using Rust and the Bevy framework.',
+    description: 'Pong, using Rust and the Macroquad framework.',
     technologies: [
       { name: 'Rust', url: 'https://www.rust-lang.org/' },
-      { name: 'Bevy', url: 'https://bevy.org/' },
+      { name: 'Macroquad', url: 'https://macroquad.rs/' },
     ],
     github: 'https://github.com/SamgeeGamwise/PongRust',
     liveLink: '/pong/',
