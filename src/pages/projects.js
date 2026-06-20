@@ -54,6 +54,19 @@ const projects = [
     liveLink: 'https://productivity-app-ten-rho.vercel.app/',
   },
   {
+    name: 'Banking API',
+    description:
+      'Java Spring Boot banking API with customers, accounts, deposits, withdrawals, transfers, transaction history, validation, exception handling, and PostgreSQL persistence.',
+    technologies: [
+      { name: 'Java', url: 'https://www.java.com/' },
+      { name: 'Spring Boot', url: 'https://spring.io/projects/spring-boot' },
+      { name: 'Spring Data JPA', url: 'https://spring.io/projects/spring-data-jpa' },
+      { name: 'Hibernate', url: 'https://hibernate.org/' },
+      { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
+    ],
+    github: 'https://github.com/SamgeeGamwise/Altamira'
+  },
+  {
     name: 'LinkedIn Promoted Job Filter',
     description: 'Browser extension that hides promoted jobs from LinkedIn search results, including dynamically loaded listings.',
     technologies: [
