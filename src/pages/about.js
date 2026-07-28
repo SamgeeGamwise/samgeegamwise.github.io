@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
+import SEO from '../components/SEO/SEO'
 import * as styles from './about.module.scss'
-import { headData } from '../head'
 
 const skillGroups = [
   {
@@ -158,10 +158,18 @@ const About = () => {
 
 export default About
 
-export const Head = () => (
-  <>
-    <title>About — Samuel Krohn</title>
-    {headData}
-    <meta name="description" content="About Samuel Krohn — software engineer, full-stack developer, and automation specialist." />
-  </>
+export const Head = ({ location }) => (
+  <SEO
+    title="About Samuel Krohn | Software Engineer"
+    description="Learn about Samuel Krohn's full-stack engineering experience, technical skills, education, and focus on practical automation."
+    pathname={location.pathname}
+    schema={{
+      '@type': 'ProfilePage',
+      '@id': `https://samgee.gamwise.me/about/#profile`,
+      url: 'https://samgee.gamwise.me/about/',
+      name: 'About Samuel Krohn',
+      mainEntity: { '@id': 'https://samgee.gamwise.me/#person' },
+      isPartOf: { '@id': 'https://samgee.gamwise.me/#website' },
+    }}
+  />
 )

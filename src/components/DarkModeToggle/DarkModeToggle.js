@@ -38,11 +38,11 @@ const DarkModeToggle = () => {
 
   return (
     <button
-      className={`${styles.toggleWrapper} ${theme === 'dark' ? styles.darkMode : ''}`}
+      className={styles.toggleWrapper}
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >
-      <div className={`${styles.toggleSlider} ${theme === 'dark' ? styles.dark : ''}`}>
+      <div className={styles.toggleSlider}>
         {/* Sun (Light Mode) */}
         <svg
           className={`${styles.icon} ${theme === 'dark' ? styles.hidden : ''}`}

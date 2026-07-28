@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout/Layout'
+import SEO from '../components/SEO/SEO'
 import * as styles from './index.module.scss'
-import { headData } from '../head'
 
 const IndexPage = () => {
   return (
@@ -58,10 +58,10 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => (
-  <>
-    <title>Samuel Krohn — Software Engineer</title>
-    {headData}
-    <meta name="description" content="Samuel Krohn is a software engineer specializing in full-stack development, automation, and web performance." />
-  </>
+export const Head = ({ location }) => (
+  <SEO
+    title="Samuel Krohn | Software Engineer & Full-Stack Developer"
+    description="Samuel Krohn is a software engineer specializing in full-stack development, automation, and web performance."
+    pathname={location.pathname}
+  />
 )

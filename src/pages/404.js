@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout/Layout'
-import { headData } from '../head'
+import SEO from '../components/SEO/SEO'
 import * as styles from './404.module.scss'
 
 const NotFoundPage = () => {
@@ -19,10 +19,11 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => (
-  <>
-    <title>404 — Samuel Krohn</title>
-    {headData}
-    <meta name="description" content="Page not found on Samuel Krohn's portfolio." />
-  </>
+export const Head = ({ location }) => (
+  <SEO
+    title="Page Not Found | Samuel Krohn"
+    description="The requested page could not be found."
+    pathname={location.pathname}
+    noIndex
+  />
 )

@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
-import { headData } from '../head'
+import SEO from '../components/SEO/SEO'
 import * as styles from './projects.module.scss'
 
 const projects = [
   {
     name: 'DK Roofing, Painting, & Gutters',
-    description: 'Marketing website for a local roofing and painting business. Focused on performance and discoverability.',
+    description: 'Client marketing website I designed and developed for a local roofing, painting, and gutter business, with a focus on performance and local discoverability.',
     technologies: [
       { name: 'Eleventy', url: 'https://www.11ty.dev/' },
       { name: 'Nunjucks', url: 'https://mozilla.github.io/nunjucks/' },
@@ -141,10 +141,45 @@ const Projects = () => {
 
 export default Projects
 
-export const Head = () => (
-  <>
-    <title>Projects — Samuel Krohn</title>
-    {headData}
-    <meta name="description" content="Projects by Samuel Krohn — web development, automation tools, desktop apps, and more." />
-  </>
-)
+export const Head = ({ location }) => {
+  const description = 'Explore client websites, full-stack applications, automation tools, open-source packages, and games designed and developed by Samuel Krohn.'
+  const projectItems = projects.map((project, index) => {
+    const url = project.liveLink?.startsWith('http')
+      ? project.liveLink
+      : project.github || project.npmLink || undefined
+
+    return {
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'CreativeWork',
+        name: project.name,
+        description: project.description,
+        ...(url ? { url } : {}),
+        creator: { '@id': 'https://samgee.gamwise.me/#person' },
+      },
+    }
+  })
+
+  return (
+    <SEO
+      title="Software Projects & Client Work | Samuel Krohn"
+      description={description}
+      pathname={location.pathname}
+      schema={{
+        '@type': 'CollectionPage',
+        '@id': 'https://samgee.gamwise.me/projects/#collection',
+        url: 'https://samgee.gamwise.me/projects/',
+        name: 'Software Projects and Client Work by Samuel Krohn',
+        description,
+        isPartOf: { '@id': 'https://samgee.gamwise.me/#website' },
+        author: { '@id': 'https://samgee.gamwise.me/#person' },
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: projects.length,
+          itemListElement: projectItems,
+        },
+      }}
+    />
+  )
+}

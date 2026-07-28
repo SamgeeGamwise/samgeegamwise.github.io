@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Samuel Krohn - Portfolio`,
-    description: `A portfolio of Samuel Krohn's work`,
+    title: `Samuel Krohn | Software Engineer & Full-Stack Developer`,
+    description: `Portfolio of Samuel Krohn, a software engineer building performant web applications, automation tools, and full-stack products.`,
     siteUrl: `https://samgee.gamwise.me`,
     author: `Samuel Krohn`,
   },
@@ -34,7 +34,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/404/', '/404.html'],
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
+import SEO from "../components/SEO/SEO"
 
 export default function PongPage() {
   useEffect(() => {
@@ -51,3 +52,20 @@ export default function PongPage() {
     </main>
   )
 }
+
+export const Head = ({ location }) => (
+  <SEO
+    title="Pong in Rust & WebAssembly | Samuel Krohn"
+    description="Play a browser-based Pong game built by Samuel Krohn with Rust, Macroquad, and WebAssembly."
+    pathname={location.pathname}
+    schema={{
+      '@type': 'VideoGame',
+      name: 'Pong',
+      url: 'https://samgee.gamwise.me/pong/',
+      description: 'A browser-based Pong game built with Rust, Macroquad, and WebAssembly.',
+      author: { '@id': 'https://samgee.gamwise.me/#person' },
+      applicationCategory: 'Game',
+      operatingSystem: 'Web browser',
+    }}
+  />
+)
